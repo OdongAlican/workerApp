@@ -1,11 +1,15 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { Provider } from 'react-redux';
+import { store } from './core/store';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open to start</Text>
-    </View>
+    <Provider store={store}>
+      <View style={styles.container}>
+        <Text>Open to start</Text>
+      </View>
+    </Provider>
   );
 }
 
